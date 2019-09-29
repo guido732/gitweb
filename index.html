@@ -39,7 +39,7 @@
 		/>
 
 		<!-- CSS personal -->
-		<link rel="stylesheet" href="./css/master.css" />
+		<link rel="stylesheet" href="./css/master.min.css" />
 
 		<!-- Fonts -->
 		<link
@@ -232,7 +232,10 @@
 		<section class="cta">
 			<div class="fswrapper">
 				<h2><span>¿Consultas, preguntas, propuestas? </span></h2>
-				<p>Si pensás que podemos trabajar juntos o tenés una propuesta o idea a desarrollar, escribime</p>
+				<p>
+					Si pensás que podemos trabajar juntos o tenés una propuesta o idea a desarrollar, no dudes en
+					contactarme
+				</p>
 				<a class="button" href="./contacto">CONTACTO</a>
 			</div>
 		</section>
@@ -297,44 +300,6 @@
 
 		<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
-		<!-- collapsible navbar close after clic -->
-		<script>
-			$(document).on("click", function() {
-				$(".collapse").collapse("hide");
-			});
-		</script>
-
-		<!-- Masonry with isotope and imagesLoaded -->
-		<script>
-			var $grid = $(".grid").imagesLoaded(function() {
-				$grid.isotope({
-					itemSelector: ".grid-item",
-					percentPosition: true,
-					masonry: {
-						columnWidth: ".grid-sizer"
-					}
-				});
-			});
-		</script>
-
-		<!-- portfolio filter with isotope -->
-		<script>
-			var filterFns = {};
-			// bind filter button click
-			$("#filters").on("click", ".filbutton", function() {
-				var filterValue = $(this).attr("data-filter");
-				// use filterFn if matches value
-				filterValue = filterFns[filterValue] || filterValue;
-				$grid.isotope({ filter: filterValue });
-			});
-			// change is-checked class on buttons
-			$(".filtro").each(function(i, buttonGroup) {
-				var $buttonGroup = $(buttonGroup);
-				$buttonGroup.on("click", ".filbutton", function() {
-					$buttonGroup.find(".is-checked").removeClass("is-checked");
-					$(this).addClass("is-checked");
-				});
-			});
-		</script>
+		<script src="./js/init.js"></script>
 	</body>
 </html>
