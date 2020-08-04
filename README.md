@@ -1,6 +1,6 @@
 # GITWEB - Portfolio Online
 
-### [LIVE SITE](https://guido732.github.io/gitweb2/)
+### [LIVE SITE](https://guido732.github.io/gitweb/)
 
 Página de portfolio personal para mis trabajos de Desarrollo Web Frontend y otros.
 
